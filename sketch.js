@@ -4,11 +4,12 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Constraint = Matter.Constraint;
-var score=0,bg="bg1.png";
+var score=0,bg="bg1.png",bg3;
 var ball1,string,block1,block2,block3,block4,block5,backgroundImg;
 function preload()
 {
 	getBackgroundImg();
+	bg3=loadImage("bg1.png",800,700);
 	
 }
 
@@ -37,8 +38,8 @@ ground=new Block(400,650,700,10);
 
 function draw() {
   rectMode(CENTER);
-  if(backgroundImg)
-  background(backgroundImg);
+  if(bg3)
+  background(bg3);
  // block4.score();
  // block5.score();
   block6.score();
